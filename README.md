@@ -1,16 +1,50 @@
-# React + Vite
+# 🌿 AgroMart - Organic Plants & Seeds E-commerce
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AgroMart is a modern, responsive e-commerce platform built with **React** and **Redux Toolkit**. It is designed for gardening enthusiasts to browse and purchase fresh plants, seeds, and fertilizers. The application features a dedicated User Panel with advanced filtering and an Admin Dashboard for inventory management.
 
-Currently, two official plugins are available:
+## 🚀 Live Demo
+**Check out the live site here:** [Your Vercel Link Here](https://nsr-agromart-online-shop.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## ✨ Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 👤 User Panel
+* **Dynamic Product Catalog:** View a wide range of plants and seeds fetched from a central data source.
+* **Advanced Filtering:** * **Category Filter:** Browse by Seeds, Plants, or Fertilizers.
+    * **Search Functionality:** Real-time search for products by name or category.
+    * **Price Sorting:** Sort products from Low-to-High or High-to-Low.
+    * **Rating Filter:** Filter products based on star ratings (e.g., 4 stars & above).
+* **Shopping Cart:** Add/remove items and manage quantities using Redux state management.
+* **Authentication:** Secure Login/Logout functionality (only logged-in users can add items to the cart).
+* **Responsive Design:** Fully optimized for Mobile, Tablet, and Desktop.
+* **Dark Mode:** Aesthetic dark and light mode support across all pages.
 
-## Expanding the ESLint configuration
+### 🛡️ Admin Dashboard
+* **Inventory Management:** * **Create:** Add new products with image URLs, prices, and stock counts.
+    * **Read:** Real-time list of all available stock.
+    * **Update:** Edit existing product details (Price, Stock, Name, Category).
+    * **Delete:** Remove products from the inventory.
+* **Data Persistence:** Uses `localStorage` to ensure products and inventory changes remain even after page refreshes.
+* **Initial Sync:** Automatically syncs with `ProductData.js` if the local storage is empty.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack
+* **Frontend:** React.js
+* **State Management:** Redux Toolkit
+* **Styling:** Tailwind CSS
+* **Routing:** React Router DOM
+* **Deployment:** Vercel
+
+---
+
+## 📁 Folder Structure
+```text
+src/
+├── assets/          # Static images and icons
+├── components/      # Reusable UI components (Navbar, Footer, etc.)
+├── data/            # Centralized product database (ProductData.js)
+├── features/        # Redux slices (authSlice, cartSlice, productSlice)
+├── pages/           # Main views (Home, AdminPanel, Login)
+└── App.js           # Main application logic and routing
